@@ -1,6 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700&display=swap");
 
-body {
+:root {
+  /* Colors */
+  --color-primary-light: #3cb3ab;
+  --color-primary-dark: #147a73;
+  --color-grey-dark-fill: #2f2f2f;
+  --color-grey-medium-fill: #979797;
+  --color-grey-light-fill: #b1b1b1;
+  --color-grey-text: #7a7a7a;
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+* {
   margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px, 10px/16px = 0.625 = 62.5% */
+}
+
+body {
   font-family: "Commissioner", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
 }

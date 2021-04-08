@@ -1,0 +1,9 @@
+.Page {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  padding: 4rem 8rem;
+  background: url("../../img/image-hero-desktop.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
