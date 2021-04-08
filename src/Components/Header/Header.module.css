@@ -1,0 +1,33 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--color-white);
+}
+
+.Header h1 {
+  font-size: 2.4rem;
+}
+
+.Header nav {
+  display: flex;
+  align-items: center;
+}
+
+.Header ul {
+  display: flex;
+}
+
+.Header li {
+  list-style: none;
+  font-size: 1.4rem;
+}
+
+.Header li:not(:last-child) {
+  padding-right: 2rem;
+}
+
+.Header a {
+  color: var(--color-white);
+  text-decoration: none;
+}
