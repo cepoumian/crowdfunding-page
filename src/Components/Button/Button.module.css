@@ -1,0 +1,26 @@
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 204px;
+  height: 56px;
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.Button:hover {
+  background-color: var(--color-primary-dark);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .Button {
+    order: 2;
+    margin-top: 3rem;
+  }
+}

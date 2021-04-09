@@ -2,8 +2,17 @@
   display: flex;
   flex-direction: column;
   height: inherit;
-  padding: 4rem 8rem;
+  padding: 4rem 8vw;
   background: url("../../img/image-hero-desktop.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 920px) {
+  .Page {
+    padding: 2rem 4vw;
+    background: url("../../img/image-hero-mobile.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }

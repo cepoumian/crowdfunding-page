@@ -1,0 +1,16 @@
+.Main {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(100vw / 6.3);
+  min-width: calc(100vw / 2);
+  border-radius: 5px;
+  background-color: var(--color-white);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 920px) {
+  .Main {
+    margin-top: calc(100vw / 10);
+  }
+}

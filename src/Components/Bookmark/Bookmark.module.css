@@ -1,0 +1,26 @@
+.Bookmark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  border-radius: 50px;
+}
+
+.Bookmark img {
+  transition: opacity 0.2s;
+}
+
+.Bookmark span {
+  margin: 0 15px;
+  color: var(--color-grey-text);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.Bookmark:hover {
+  cursor: pointer;
+}
+
+.Bookmark:hover img {
+  opacity: 0.5;
+}
