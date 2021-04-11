@@ -6,7 +6,7 @@ import logo from "../../img/logo-mastercraft.svg";
 
 const CallToAction = (props) => {
   return (
-    <div className={classes.CallToAction}>
+    <section className={classes.CallToAction}>
       <img src={logo} alt="Master craft logo" />
       <h1>Mastercraft Bamboo Monitor Riser</h1>
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
@@ -14,7 +14,7 @@ const CallToAction = (props) => {
         <Button>Back this project</Button>
         <Bookmark />
       </div>
-    </div>
+    </section>
   );
 };
 
