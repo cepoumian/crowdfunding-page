@@ -1,0 +1,80 @@
+.Progress {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.Progress ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 1.4%;
+}
+
+.Progress li {
+  flex-grow: 1;
+}
+
+.Progress li:first-child {
+  padding-right: 9%;
+  padding-top: 1rem;
+}
+
+.Progress li:nth-child(2) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding-right: 9%;
+  padding-left: 9%;
+  padding-top: 1rem;
+}
+
+.Progress li:last-child {
+  padding-left: 9%;
+  padding-top: 1rem;
+}
+
+.Progress h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.Progress p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-grey-text);
+}
+
+.Progress .Bar {
+  height: 20px;
+  position: relative;
+  margin-top: 3rem;
+  background-color: var(--color-grey-light-fill);
+  border-radius: 25px;
+}
+
+.Progress span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  border-radius: 25px;
+  background-color: var(--color-primary-light);
+}
+
+@media only screen and (max-width: 500px) {
+  .Progress li:first-child {
+    padding-right: 4%;
+  }
+  .Progress li:nth-child(2) {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .Progress li:last-child {
+    padding-left: 4%;
+  }
+
+  .Progress .Bar {
+    align-self: center;
+  }
+}
