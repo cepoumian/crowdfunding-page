@@ -28,7 +28,7 @@
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 660px) {
   .Bookmark {
     width: 140px;
     height: 47.6px;

@@ -5,6 +5,7 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import CallToAction from "./Components/CallToAction/CallToAction";
 import Progress from "./Components/Progress/Progress";
+import About from "./Components/About/About";
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           <Main>
             <CallToAction />
             <Progress />
+            <About />
           </Main>
         </Page>
       </div>
