@@ -16,3 +16,15 @@
     background-repeat: no-repeat;
   }
 }
+
+@media only screen and (max-width: 920px) {
+  .Page {
+    padding: 2rem 2vw;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .Page {
+    padding: 2rem 1vw;
+  }
+}

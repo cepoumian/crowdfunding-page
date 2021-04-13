@@ -1,7 +1,7 @@
 .CallToAction {
   display: flex;
   flex-direction: column;
-  padding: 0 2rem 2rem 2rem;
+  padding-bottom: 2rem;
   margin-top: -3rem;
 }
 
@@ -27,7 +27,13 @@
 .CallToAction .buttons {
   display: flex;
   justify-content: space-between;
-  padding: 0 1.4%;
+}
+
+@media only screen and (max-width: 660px) {
+  .CallToAction .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -42,7 +48,6 @@
   }
 
   .CallToAction .buttons {
-    flex-direction: column;
-    align-items: center;
+    margin-top: 2rem;
   }
 }

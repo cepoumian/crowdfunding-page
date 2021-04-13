@@ -2,8 +2,10 @@
   align-self: center;
   display: flex;
   flex-direction: column;
+  width: calc(100vw / 1.5);
+  /* width: 723px; */
   margin-top: calc(100vw / 6.3);
-  min-width: calc(100vw / 2);
+  padding: 0 4rem;
   border-radius: 5px;
   background-color: var(--color-white);
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
@@ -11,6 +13,19 @@
 
 @media only screen and (max-width: 920px) {
   .Main {
+    width: calc(100vw / 1.25);
     margin-top: calc(100vw / 10);
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .Main {
+    width: calc(100vw / 1.25);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Main {
+    width: calc(100vw / 1.15);
   }
 }

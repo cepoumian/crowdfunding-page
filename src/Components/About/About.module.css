@@ -1,0 +1,33 @@
+.About {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.About h1 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.About p {
+  line-height: 2;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--color-grey-text);
+}
+
+@media only screen and (max-width: 920px) {
+  .About {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .About {
+    margin-top: 0;
+  }
+
+  .About h1 {
+    margin-bottom: 1rem;
+  }
+}
