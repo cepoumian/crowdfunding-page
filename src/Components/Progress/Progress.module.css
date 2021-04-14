@@ -47,6 +47,7 @@
 
 .Progress .Bar {
   height: 20px;
+  max-width: 100%;
   position: relative;
   margin-top: 3rem;
   background-color: var(--color-grey-light-fill);
@@ -58,6 +59,7 @@
   position: relative;
   overflow: hidden;
   height: 20px;
+  max-width: 100%;
   border-radius: 25px;
   background-color: var(--color-primary-light);
 }
