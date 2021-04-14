@@ -5,11 +5,25 @@ class Progress extends Component {
   state = {
     backed: 25,
     backers: 50,
+    barWidth: window.innerWidth / 2.25,
+    progressWidth: (25 / 100) * (window.innerWidth / 2.25),
   };
 
   componentDidMount() {
     this.backProject();
+    window.addEventListener("resize", this.updateBarSize);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateBarSize);
+  }
+
+  updateBarSize = () => {
+    this.setState({
+      barWidth: window.innerWidth / 2.25,
+      progressWidth: (this.state.backed / 100) * (window.innerWidth / 2.25),
+    });
+  };
 
   backProject = () => {
     let min = 1,
@@ -21,14 +35,12 @@ class Progress extends Component {
         backed: this.state.backed + ammount,
         backers: this.state.backers + 1,
       });
+      this.updateBarSize();
       setTimeout(this.backProject, rand * 1000);
     }
   };
 
   render() {
-    let barWidth = `${window.innerWidth / 2.25}px`;
-    let progressWidth = `${(this.state.backed / 100) * (window.innerWidth / 2.25)}px`;
-
     return (
       <section className={classes.Progress}>
         <ul>
@@ -45,8 +57,8 @@ class Progress extends Component {
             <p>days left</p>
           </li>
         </ul>
-        <div style={{ width: barWidth }} className={classes.Bar}>
-          <span style={{ width: progressWidth }}></span>
+        <div style={{ width: this.state.barWidth }} className={classes.Bar}>
+          <span style={{ width: this.state.progressWidth }}></span>
         </div>
       </section>
     );
