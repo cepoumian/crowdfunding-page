@@ -1,0 +1,57 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 4rem 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.Card > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Card h1 {
+  font-size: 1.8rem;
+}
+
+.Card p {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2;
+  color: var(--color-grey-text);
+}
+
+.Card > div:first-child > span {
+  font-size: 1.6rem;
+  color: var(--color-primary-light);
+}
+
+.Card > div:last-child span:first-child {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+.Card > div:last-child span:last-child {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  color: var(--color-grey-text);
+}
+
+@media only screen and (max-width: 500px) {
+  .Card > div {
+    flex-direction: column;
+  }
+
+  .Card > div:last-child span:first-child {
+    margin: 3rem 0;
+  }
+
+  .Card button {
+    margin-top: 3rem !important;
+  }
+}

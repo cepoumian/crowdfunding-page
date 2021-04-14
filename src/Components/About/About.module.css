@@ -1,5 +1,5 @@
 .About {
-  margin-top: 2rem;
+  margin-top: 5rem;
   padding-bottom: 2rem;
 }
 
@@ -18,13 +18,13 @@
 
 @media only screen and (max-width: 920px) {
   .About {
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
 }
 
 @media only screen and (max-width: 660px) {
   .About {
-    margin-top: 0;
+    margin-top: 3rem;
   }
 
   .About h1 {

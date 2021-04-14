@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 165px;
+  min-width: 165px;
   height: 56px;
   border: none;
   border-radius: 50px;
@@ -30,7 +30,7 @@
 
 @media only screen and (max-width: 660px) {
   .Bookmark {
-    width: 140px;
+    min-width: 140px;
     height: 47.6px;
   }
 
