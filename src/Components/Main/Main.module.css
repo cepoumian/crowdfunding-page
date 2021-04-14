@@ -2,8 +2,7 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  width: calc(100vw / 1.5);
-  /* width: 723px; */
+  width: 825px;
   margin-top: calc(100vw / 6.3);
   padding: 0 4rem;
   border-radius: 5px;

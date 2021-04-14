@@ -18,10 +18,15 @@
   cursor: pointer;
 }
 
+@media only screen and (min-width: 661px) {
+  .Button {
+    margin-top: 0 !important;
+  }
+}
+
 @media only screen and (max-width: 660px) {
   .Button {
     order: 2;
-    margin-top: 3rem;
     width: 173.4px;
     height: 47.6px;
   }
