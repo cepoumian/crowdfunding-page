@@ -41,9 +41,17 @@
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 920px) {
+  .Header {
+    margin: 0 2rem;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .Header {
+    align-self: center;
     flex-direction: column;
+    align-items: center;
   }
 
   .Header nav {

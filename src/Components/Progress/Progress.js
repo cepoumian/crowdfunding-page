@@ -3,15 +3,18 @@ import classes from "./Progress.module.css";
 
 class Progress extends Component {
   state = {
-    backed: 25,
-    backers: 50,
     barWidth: window.innerWidth / 2.25,
     progressWidth: (25 / 100) * (window.innerWidth / 2.25),
   };
 
   componentDidMount() {
-    this.backProject();
     window.addEventListener("resize", this.updateBarSize);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.backed !== this.props.backed) {
+      this.updateBarSize();
+    }
   }
 
   componentWillUnmount() {
@@ -21,23 +24,8 @@ class Progress extends Component {
   updateBarSize = () => {
     this.setState({
       barWidth: window.innerWidth / 2.25,
-      progressWidth: (this.state.backed / 100) * (window.innerWidth / 2.25),
+      progressWidth: (this.props.backed / 100000) * (window.innerWidth / 2.25),
     });
-  };
-
-  backProject = () => {
-    let min = 1,
-      max = 10;
-    let rand = Math.floor(Math.random() * (max - min + 1) + min);
-    let ammount = Math.floor(Math.random() * 10);
-    if (this.state.backed < 95) {
-      this.setState({
-        backed: this.state.backed + ammount,
-        backers: this.state.backers + 1,
-      });
-      this.updateBarSize();
-      setTimeout(this.backProject, rand * 1000);
-    }
   };
 
   render() {
@@ -45,11 +33,11 @@ class Progress extends Component {
       <section className={classes.Progress}>
         <ul>
           <li>
-            <h1>${this.state.backed * 1000}</h1>
+            <h1>${this.props.backed.toLocaleString()}</h1>
             <p>of $100,000 backed</p>
           </li>
           <li>
-            <h1>{this.state.backers}</h1>
+            <h1>{this.props.backers}</h1>
             <p>total backers</p>
           </li>
           <li>

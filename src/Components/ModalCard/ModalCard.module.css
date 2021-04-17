@@ -1,0 +1,184 @@
+.ModalCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-grey-light-fill);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.ModalCard > div {
+  display: flex;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.ModalCard > div > div:first-child {
+  display: flex;
+  align-self: flex-start;
+}
+
+.radioButton {
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.radioButton label {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transform: translateY(-25%);
+}
+
+.radioButton input {
+  display: none;
+}
+
+.radioButton span {
+  display: inline-block;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--color-grey-light-fill);
+  border-radius: 50%;
+}
+
+.radioButton span::after {
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  opacity: 0;
+}
+
+.radioButton input:checked + span::after {
+  opacity: 1;
+}
+
+.ModalCard > div > div:last-child {
+  margin-left: 2rem;
+}
+
+.ModalCard > div > div:last-child > div {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-size: 1.6rem;
+}
+
+.pledgeMsg {
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  color: var(--color-primary-light);
+}
+
+.left {
+  margin-left: auto;
+}
+
+.left span:first-child {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.left span:last-child {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-grey-text);
+}
+
+.ModalCard p {
+  font-size: 1.4rem;
+}
+
+.ModalCard form {
+  display: flex;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ModalCard form span {
+  display: flex;
+  align-self: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-grey-text);
+}
+
+.ModalCard form > div {
+  margin-left: auto;
+  display: flex;
+}
+
+.ModalCard form div span {
+  display: block;
+  padding: 1.5rem 2rem;
+  margin-right: 1rem;
+  border: 1px solid var(--color-primary-light);
+  border-radius: 50px;
+}
+
+.ModalCard form input {
+  width: 50px;
+  margin-left: 1rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media only screen and (max-width: 530px) {
+  .ModalCard > div > div:last-child > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ModalCard > div > div:last-child {
+    margin-left: 0;
+  }
+
+  .ModalCard > div > div:last-child > div:first-child {
+    margin-left: 2rem;
+  }
+
+  .pledgeMsg {
+    margin-left: 0;
+  }
+
+  .left {
+    margin-left: 0;
+  }
+
+  .ModalCard form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ModalCard form > div {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .ModalCard form span {
+    margin-bottom: 2rem;
+  }
+}
