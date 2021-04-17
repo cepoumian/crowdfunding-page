@@ -18,7 +18,7 @@ class Bookmark extends Component {
 
     return (
       <button onClick={this.toggleBookmark} style={styles} className={classes.Bookmark}>
-        <img src={bookmarkIcon} alt="Bookmark Logo" />
+        <img src={bookmarkIcon} alt="Bookmark icon" />
         <span>{this.state.bookmarked ? "Bookmarked" : "Bookmark"}</span>
       </button>
     );
